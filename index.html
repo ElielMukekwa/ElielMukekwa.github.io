@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Creative Developer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // REMPLACEZ 'YOUR_PUBLIC_KEY' PAR VOTRE CLÉ PUBLIQUE EMAILJS
+            // Créez un compte gratuit sur https://www.emailjs.com/
+            emailjs.init("GhmYzU4-nPYYbZ8z2");
+        })();
+    </script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#3b82f6', // Blue-500
+                            hover: '#2563eb',   // Blue-600
+                        },
+                        secondary: {
+                            DEFAULT: '#8b5cf6', // Violet-500
+                            hover: '#7c3aed',   // Violet-600
+                        },
+                        dark: {
+                            bg: '#0f172a',      // Slate-900
+                            card: '#1e293b',    // Slate-800
+                            text: '#f1f5f9',    // Slate-100
+                        },
+                        light: {
+                            bg: '#f0f9ff',      // Sky-50
+                            card: '#ffffff',    // White
+                            text: '#1e293b',    // Slate-800
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-text {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+            }
+            .btn-primary {
+                @apply px-6 py-3 bg-primary text-white rounded-lg font-medium transition-all hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30;
+            }
+            .btn-outline {
+                @apply px-6 py-3 border border-primary text-primary rounded-lg font-medium transition-all hover:bg-primary/5 dark:text-white dark:border-white dark:hover:bg-white/10;
+            }
+            .nav-link {
+                @apply text-light-text dark:text-dark-text hover:text-primary dark:hover:text-secondary transition-colors;
+            }
+            .section-padding {
+                @apply py-20 px-4 sm:px-6 lg:px-8;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-300 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-light-bg/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold gradient-text">Portfolio.</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link" data-i18n="nav_home">Home</a>
+                    <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+                    <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+                </nav>
+
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Settings -->
+                    <div class="flex items-center space-x-4">
+                        <button id="lang-toggle" class="px-3 py-1 rounded border border-gray-300 dark:border-gray-600 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            EN
+                        </button>
+                        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-light-bg dark:bg-dark-bg border-b border-gray-200 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="nav_home">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="nav_about">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="nav_projects">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="nav_contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-16 section-padding relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-40 -left-20 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 z-10 animate-fade-in-up">
+                    <h2 class="text-secondary font-medium text-lg" data-i18n="hero_greeting">Hello, I'm</h2>
+                    <h1 class="text-5xl md:text-7xl font-bold text-light-text dark:text-white">
+                        Eliel <span class="gradient-text">Mukekwa</span>
+                    </h1>
+                    <h3 class="text-2xl md:text-3xl text-gray-500 dark:text-gray-400" data-i18n="hero_role">Creative Developer</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 max-w-lg" data-i18n="hero_desc">
+                        I build accessible, pixel-perfect, and performant web experiences.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#projects" class="btn-primary" data-i18n="hero_cta">View My Work</a>
+                        <a href="#contact" class="btn-outline">Contact</a>
+                    </div>
+                </div>
+                <div class="relative z-10 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary to-secondary p-1 shadow-2xl">
+                        <div class="w-full h-full rounded-full bg-light-bg dark:bg-dark-bg flex items-center justify-center overflow-hidden">
+                            <img src="image/a2f4c726-af70-4402-85de-79eef91d25ff.png" alt="Eliel Mukekwa" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-light-card dark:bg-dark-card transition-colors">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="about_title">About Me</h2>
+                    <div class="h-1 w-20 bg-primary mx-auto rounded"></div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-12 max-w-3xl text-center" data-i18n="about_text">
+                        I am an electronics engineer and developer passionate about creating practical solutions. I combine my skills in electronics and programming to develop web, mobile, and desktop applications with modern and functional designs.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
+                        <!-- Experience -->
+                        <div class="p-6 bg-white dark:bg-dark-bg rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 text-center transform hover:-translate-y-1 transition-transform duration-300">
+                            <span class="text-4xl font-bold text-primary mb-2 block">2+</span>
+                            <span class="text-gray-600 dark:text-gray-400 font-medium" data-i18n="about_stats_exp">Years Experience</span>
+                        </div>
+                        
+                        <!-- Projects -->
+                        <div class="p-6 bg-white dark:bg-dark-bg rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 text-center transform hover:-translate-y-1 transition-transform duration-300">
+                            <span class="text-4xl font-bold text-secondary mb-2 block">10+</span>
+                            <span class="text-gray-600 dark:text-gray-400 font-medium" data-i18n="about_stats_proj">Projects Completed</span>
+                        </div>
+                        
+                        <!-- Clients -->
+                        <div class="p-6 bg-white dark:bg-dark-bg rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 text-center transform hover:-translate-y-1 transition-transform duration-300">
+                            <span class="text-4xl font-bold text-blue-400 mb-2 block">5+</span>
+                            <span class="text-gray-600 dark:text-gray-400 font-medium" data-i18n="about_stats_clients">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="skills_section_title">My Skills</h2>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="skills_desc">The tools and technologies I use.</p>
+                    <div class="h-1 w-20 bg-secondary mx-auto rounded mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Frontend -->
+                    <div class="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow w-full">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6" data-i18n="skill_fe">Software Development</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fab fa-python text-blue-500 text-xl w-6 text-center"></i>
+                                <span>Python</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fab fa-php text-indigo-500 text-xl w-6 text-center"></i>
+                                <span>PHP / Laravel</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fab fa-react text-sky-400 text-xl w-6 text-center"></i>
+                                <span>React</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-mobile-alt text-green-500 text-xl w-6 text-center"></i>
+                                <span>Flutter / Kotlin</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-server text-gray-500 text-xl w-6 text-center"></i>
+                                <span>API REST</span>
+                            </li>
+                             <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-microchip text-teal-600 text-xl w-6 text-center"></i>
+                                <span>Arduino</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow w-full">
+                        <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6" data-i18n="skill_tools">Tools & DevOps</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fab fa-git-alt text-red-500 text-xl w-6 text-center"></i>
+                                <span>Git & GitHub</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-code text-blue-500 text-xl w-6 text-center"></i>
+                                <span>VS Code</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <div class="w-8 flex justify-center items-center">
+                                    <img src="image/proteus.png" alt="Proteus" class="h-6 w-auto object-contain rounded shadow-sm">
+                                </div>
+                                <span>Proteus Design</span>
+                            </li>
+                             <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-database text-yellow-500 text-xl w-6 text-center"></i>
+                                <span>MySQL</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Design -->
+                    <div class="bg-white dark:bg-dark-card p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow w-full">
+                        <div class="w-14 h-14 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6" data-i18n="skill_design">Design & Others</h3>
+                         <ul class="space-y-3">
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-vector-square text-pink-500 text-xl w-6 text-center"></i>
+                                <span>UI/UX Principles</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fab fa-figma text-purple-500 text-xl w-6 text-center"></i>
+                                <span>Figma</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-600 dark:text-gray-300">
+                                <i class="fab fa-css3-alt text-teal-400 text-xl w-6 text-center"></i>
+                                <span>Tailwind CSS</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding relative max-w-4xl mx-auto w-full px-4 py-24 overflow-hidden">
+            <!-- Section Header -->
+            <div class="text-center mb-16 animate-fade-in">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-briefcase text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent" data-i18n="experience_title">
+                        Experience
+                    </h2>
+                </div>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="experience_subtitle">
+                    My professional journey and career highlights.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Vertical line -->
+                <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-transparent"></div>
+
+
+                <div class="flex flex-col gap-12">
+                     <!-- Item 1: UDBL (Current) -->
+                    <div class="relative flex gap-6 group">
+                        <!-- Logo -->
+                        <div class="relative z-10 shrink-0">
+                            <div class="absolute -inset-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full opacity-40 blur-lg group-hover:opacity-60 transition-opacity"></div>
+                            <div class="relative w-16 h-16 rounded-full bg-white dark:bg-dark-card flex items-center justify-center shadow-xl border-4 border-gray-50 dark:border-dark-bg group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                <img src="image/udbl.jpg" alt="UDBL Logo" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="flex-1 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative group/card">
+                                 <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover/card:opacity-20 blur-xl transition-all duration-500"></div>
+                                <div class="relative bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-xl">
+                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-3">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1" data-i18n="exp_1_title">Computer Science Student</h3>
+                                            <p class="text-base font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700" data-i18n="exp_1_company">Don Bosco University</p>
+                                        </div>
+                                        <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                            <i class="far fa-clock text-xs"></i>
+                                            <span data-i18n="exp_1_date">2022 - Present</span>
+                                        </span>
+                                    </div>
+                                    <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="exp_1_desc">
+                                        Pursuing an in-depth academic curriculum in software engineering.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: IT Salama (Previous) -->
+                    <div class="relative flex gap-6 group">
+                        <!-- Logo -->
+                        <div class="relative z-10 shrink-0">
+                            <div class="absolute -inset-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full opacity-40 blur-lg group-hover:opacity-60 transition-opacity"></div>
+                            <div class="relative w-16 h-16 rounded-full bg-white dark:bg-dark-card flex items-center justify-center shadow-xl border-4 border-gray-50 dark:border-dark-bg group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                <img src="image/ITSalama.jpg" alt="IT Salama Logo" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="flex-1 transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative group/card">
+                                 <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl opacity-0 group-hover/card:opacity-20 blur-xl transition-all duration-500"></div>
+                                <div class="relative bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-xl">
+                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-3">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1" data-i18n="exp_2_title">Electronics Technician</h3>
+                                            <p class="text-base font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600" data-i18n="exp_2_company">IT Salama</p>
+                                        </div>
+                                        <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                            <i class="far fa-clock text-xs"></i>
+                                            <span data-i18n="exp_2_date">2018 - 2022</span>
+                                        </span>
+                                    </div>
+                                    <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="exp_2_desc">
+                                        Specialized technical training in electronics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="projects_title">Featured Projects</h2>
+                    <div class="h-1 w-20 bg-secondary mx-auto rounded"></div>
+                </div>
+
+                <!-- Carousel Project Container -->
+                 <div class="relative px-4 md:px-12">
+                    <!-- Carousel Viewport -->
+                    <div class="overflow-hidden" id="carousel-viewport">
+                        <!-- Track with items -->
+                        <div id="projects-track" class="flex transition-transform duration-500 ease-out">
+                            <!-- Items will be injected here via JavaScript -->
+                        </div>
+                    </div>
+
+                     <!-- Navigation Buttons -->
+                    <button id="prev-project" class="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 p-3 rounded-full bg-white dark:bg-dark-card shadow-lg text-primary hover:bg-primary hover:text-white transition-colors border border-gray-100 dark:border-gray-800 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="next-project" class="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 p-3 rounded-full bg-white dark:bg-dark-card shadow-lg text-primary hover:bg-primary hover:text-white transition-colors border border-gray-100 dark:border-gray-800 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div id="carousel-indicators" class="flex justify-center mt-8 space-x-2">
+                        <!-- Indicators will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-light-card dark:bg-dark-card transition-colors">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="contact_title">Get In Touch</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-i18n="contact_desc">
+                        I'm currently looking for new opportunities.
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <!-- Contact Form -->
+                    <div class="w-full">
+                        <form id="contact-form" class="space-y-6 bg-white dark:bg-dark-bg p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" data-i18n="form_name">Name</label>
+                                    <input type="text" id="contact-name" name="name" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-white" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" data-i18n="form_email">Email</label>
+                                    <input type="email" id="contact-email" name="email" required class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-white" placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" data-i18n="form_message">Message</label>
+                                <textarea id="contact-message" name="message" required rows="6" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all dark:text-white resize-none" placeholder="Hello I would like to..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary py-4 text-lg rounded-xl flex justify-center items-center space-x-2 shadow-lg shadow-primary/30">
+                                <span data-i18n="form_send">Send Message</span>
+                                <i class="fas fa-paper-plane text-sm"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center border-t border-gray-200 dark:border-gray-800">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="mailto:elielmukekwa02@gmail.com" class="text-gray-500 dark:text-gray-400 hover:text-red-500 transition-colors">
+                <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="https://github.com/Eliel-el/" class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/eliel-mukekwa-1606373ab" class="text-gray-500 dark:text-gray-400 hover:text-[#0077b5] transition-colors">
+                <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="https://wa.me/0895964503" class="text-gray-500 dark:text-gray-400 hover:text-[#25D366] transition-colors">
+                <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+        </div>
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 Eliel Mukekwa. <span data-i18n="footer_rights">All rights reserved.</span>
+        </p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
