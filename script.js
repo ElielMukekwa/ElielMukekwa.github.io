@@ -145,6 +145,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 function init() {
     applyTheme(currentTheme);
     applyLanguage(currentLang);
+    initProfileImageLoading();
     
     // Theme Event Listener
     themeToggleBtn.addEventListener('click', () => {
@@ -217,6 +218,28 @@ function init() {
 
     // Initialize Carousel
     initCarousel();
+}
+
+function initProfileImageLoading() {
+    const profileImg = document.querySelector('[data-profile-img]');
+    const placeholder = document.querySelector('[data-profile-placeholder]');
+
+    if (!profileImg || !placeholder) return;
+
+    const showImage = () => {
+        profileImg.classList.remove('opacity-0');
+        placeholder.classList.add('hidden');
+    };
+
+    if (profileImg.complete && profileImg.naturalWidth > 0) {
+        showImage();
+        return;
+    }
+
+    profileImg.addEventListener('load', showImage);
+    profileImg.addEventListener('error', () => {
+        placeholder.classList.remove('animate-pulse');
+    });
 }
 
 /* =========================================

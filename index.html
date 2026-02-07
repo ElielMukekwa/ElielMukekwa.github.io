@@ -149,8 +149,9 @@
                 </div>
                 <div class="relative z-10 flex justify-center">
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary to-secondary p-1 shadow-2xl">
-                        <div class="w-full h-full rounded-full bg-light-bg dark:bg-dark-bg flex items-center justify-center overflow-hidden">
-                            <img src="image/profile.png" alt="Eliel Mukekwa" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        <div class="w-full h-full rounded-full bg-light-bg dark:bg-dark-bg flex items-center justify-center overflow-hidden relative">
+                            <div data-profile-placeholder class="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse"></div>
+                            <img src="image/profile.png" alt="Eliel Mukekwa" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 opacity-0" data-profile-img decoding="async">
                         </div>
                     </div>
                 </div>
