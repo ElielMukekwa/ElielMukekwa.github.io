@@ -4,100 +4,130 @@ const translations = {
         nav_about: "About",
         nav_projects: "Projects",
         nav_contact: "Contact",
+
         hero_greeting: "Hello, I'm",
-        hero_role: "Creative Developer",
-        hero_desc: "I build accessible, pixel-perfect, and performant web experiences focusing on clean code and user-centric design.",
+        hero_role: "Developer & Electronics Engineer",
+        hero_desc: "I build web and mobile applications and design electronic solutions by combining programming, interface design, and problem-solving to create useful and modern tools.",
         hero_cta: "My Projects",
+
         about_title: "About Me",
-        about_text: "I am an electronics engineer and developer passionate about creating practical solutions. I combine my skills in electronics and programming to develop web, mobile, and desktop applications with modern and functional designs.",
-        about_stats_exp: "Years Experience",
-        about_stats_proj: "Projects Completed",
-        about_stats_clients: "Happy Clients",
+        about_text: "I am a developer and electronics engineer passionate about technology and innovation. I enjoy building web, mobile, and desktop applications, as well as electronic systems that solve real-world problems. I focus on writing clean code and designing simple, modern user interfaces.",
+
+        about_stats_exp: "Years Learning",
+        about_stats_proj: "Projects Built",
+        about_stats_clients: "Technologies Used",
+
         skills_section_title: "My Skills",
-        skills_desc: "The tools and technologies I use to bring products to life.",
+        skills_desc: "Technologies and tools I use to design and build applications.",
+
         skill_fe: "Software Development",
-        skill_tools: "Tools & DevOps",
-        skill_design: "Design & Others",
+        skill_tools: "Tools & Systems",
+        skill_design: "UI Design & Electronics",
+
         experience_title: "Experience",
-        experience_subtitle: "My professional journey and career highlights.",
+        experience_subtitle: "My academic and technical journey.",
+
         exp_1_title: "Computer Science Student",
         exp_1_company: "Don Bosco University of Lubumbashi",
         exp_1_date: "2022 - Present",
-        exp_1_desc: "Pursuing an in-depth academic curriculum in software engineering and information systems. Acquiring strong skills in algorithms, web and mobile development, and database management.",
+        exp_1_desc: "Studying software engineering, algorithms, databases, and application development. Building academic and personal projects in web, mobile, and desktop development.",
+
         exp_2_title: "Electronics Technician",
         exp_2_company: "Salama Technical Institute",
         exp_2_date: "2018 - 2022",
-        exp_2_desc: "Specialized technical training in electronics. Execution of practical projects involving circuit design, electronic systems maintenance, and microcontroller programming (Arduino).",
+        exp_2_desc: "Technical training in electronics, including circuit design, maintenance of electronic systems, and microcontroller programming such as Arduino.",
+
         projects_title: "Featured Projects",
-        project_card_1_title: "E-Commerce Dashboard",
-        project_card_1_desc: "A responsive admin dashboard with dark mode support.",
-        project_card_2_title: "Social Media App",
-        project_card_2_desc: "A mobile-first social platform for connecting developers.",
-        project_card_3_title: "Portfolio Template",
-        project_card_3_desc: "A customizable portfolio website built with modern tools.",
+        project_card_1_title: "E-Commerce Application",
+        project_card_1_desc: "Online store application with admin dashboard and product management.",
+        project_card_2_title: "Student Monitoring System",
+        project_card_2_desc: "Educational data visualization application for tracking student performance.",
+        project_card_3_title: "Developer Portfolio",
+        project_card_3_desc: "Personal portfolio website with modern design and multilingual support.",
+
         project_view: "View Code",
+
         contact_title: "Get In Touch",
-        contact_desc: "I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+        contact_desc: "Feel free to contact me for collaboration, projects, or learning opportunities in software development or electronics.",
         contact_btn: "Say Hello",
+
         contact_info_title: "Contact Info",
         contact_phone: "Phone",
         contact_whatsapp: "WhatsApp",
+
         form_name: "Name",
         form_email: "Email",
         form_message: "Message",
         form_send: "Send Message",
+
         footer_rights: "All rights reserved."
     },
+
     fr: {
         nav_home: "Accueil",
         nav_about: "À propos",
         nav_projects: "Projets",
         nav_contact: "Contact",
+
         hero_greeting: "Bonjour, je suis",
-        hero_role: "Développeur Créatif",
-        hero_desc: "Je conçois des expériences web accessibles et performantes, en mettant l'accent sur un code propre et un design centré sur l'utilisateur.",
+        hero_role: "Développeur & Électronicien",
+        hero_desc: "Je développe des applications web et mobiles et je conçois des solutions électroniques en combinant programmation, design d’interface et résolution de problèmes pour créer des outils utiles et modernes.",
         hero_cta: "Mes Projets",
+
         about_title: "À propos de moi",
-        about_text: "Je suis un électronicien et développeur passionné par la création de solutions pratiques. Je combine mes compétences en électronique et programmation pour développer des applications web, mobiles et desktop avec un design moderne et fonctionnel.",
-        about_stats_exp: "Années d'Expérience",
-        about_stats_proj: "Projets Terminés",
-        about_stats_clients: "Clients Satisfaits",
+        about_text: "Je suis développeur et électronicien passionné par la technologie et l’innovation. J’aime créer des applications web, mobiles et desktop ainsi que des systèmes électroniques qui répondent à des besoins réels. Je m’intéresse particulièrement au code propre et aux interfaces modernes et simples.",
+
+        about_stats_exp: "Années d’apprentissage",
+        about_stats_proj: "Projets réalisés",
+        about_stats_clients: "Technologies utilisées",
+
         skills_section_title: "Mes Compétences",
-        skills_desc: "Les outils et technologies que j'utilise pour donner vie aux produits.",
+        skills_desc: "Technologies et outils que j’utilise pour concevoir et développer des applications.",
+
         skill_fe: "Développement Logiciel",
-        skill_tools: "Outils & DevOps",
-        skill_design: "Design & Autres",
+        skill_tools: "Outils & Systèmes",
+        skill_design: "UI Design & Électronique",
+
         experience_title: "Expérience",
-        experience_subtitle: "Mon parcours académique et professionnel.",
-        exp_1_title: "Étudiant en Sciences Informatiques",
+        experience_subtitle: "Mon parcours académique et technique.",
+
+        exp_1_title: "Étudiant en Informatique",
         exp_1_company: "Université Don Bosco de Lubumbashi",
         exp_1_date: "2022 - Présent",
-        exp_1_desc: "Poursuite d'un cursus académique approfondi en génie logiciel et systèmes d'information. Acquisition de compétences solides en algorithmique, développement web et mobile, et gestion de bases de données.",
+        exp_1_desc: "Formation en génie logiciel, algorithmique, bases de données et développement d’applications. Réalisation de projets académiques et personnels en développement web, mobile et desktop.",
+
         exp_2_title: "Technicien en Électronique",
         exp_2_company: "Institut Technique Salama",
         exp_2_date: "2018 - 2022",
-        exp_2_desc: "Formation technique spécialisée en électronique. Réalisation de projets pratiques impliquant la conception de circuits, la maintenance de systèmes électroniques et la programmation de microcontrôleurs (Arduino).",
+        exp_2_desc: "Formation technique en électronique incluant la conception de circuits, la maintenance de systèmes électroniques et la programmation de microcontrôleurs comme Arduino.",
+
         projects_title: "Projets Récents",
-        project_card_1_title: "Tableau de Bord E-Commerce",
-        project_card_1_desc: "Un tableau de bord administrateur réactif avec support du mode sombre.",
-        project_card_2_title: "App Réseau Social",
-        project_card_2_desc: "Une plateforme sociale mobile-first pour connecter les développeurs.",
-        project_card_3_title: "Modèle de Portfolio",
-        project_card_3_desc: "Un site portfolio personnalisable construit avec des outils modernes.",
+        project_card_1_title: "Application E-Commerce",
+        project_card_1_desc: "Application de boutique en ligne avec tableau de bord administrateur et gestion des produits.",
+        project_card_2_title: "Système de Suivi Scolaire",
+        project_card_2_desc: "Application de visualisation des performances scolaires basée sur des données éducatives.",
+        project_card_3_title: "Portfolio Développeur",
+        project_card_3_desc: "Site portfolio personnel avec design moderne et support multilingue.",
+
         project_view: "Voir le Code",
+
         contact_title: "Contactez-moi",
-        contact_desc: "Je suis actuellement à la recherche de nouvelles opportunités. Que vous ayez une question ou que vous vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre !",
+        contact_desc: "N’hésitez pas à me contacter pour une collaboration, un projet ou un échange autour du développement logiciel ou de l’électronique.",
         contact_btn: "Dire Bonjour",
+
         contact_info_title: "Infos de Contact",
         contact_phone: "Téléphone",
         contact_whatsapp: "WhatsApp",
+
         form_name: "Nom",
         form_email: "Email",
         form_message: "Message",
         form_send: "Envoyer le message",
+
         footer_rights: "Tous droits réservés."
     }
 };
+
 
 // State
 let currentLang = 'fr';
