@@ -228,24 +228,24 @@ const projectsData = [
         title: "Site E-Commerce Tangawisa",
         description: "Plateforme de commerce électronique pour la vente de produits artisanaux locaux. Conception d'une interface utilisateur moderne et responsive avec intégration d'un système de paiement.",
         tags: ["PHP", "Tailwind", "Laragon"],
-        link: "https://github.com/Eliel-el/Tangawisa",
-        github: "https://github.com/Eliel-el/", // Lien GitHub optionnel
+        link: "https://github.com/ElielMukekwa/Tangawisa",
+        github: "https://github.com/ElielMukekwa/", // Lien GitHub optionnel
         image: "image/tangawisa.png" // Lien vers une image du projet (optionnel)
     },
     {
         title: "NetworkManager",
         description: "Application de découverte, monitoring et gestion de réseau local avec interface graphique moderne et CLI puissant. Permet de détecter, identifier et superviser les appareils connectés en temps réel.",
         tags: ["Python", "PyQt5",],
-        link: "https://github.com/Eliel-el/NetworkManager",
-        github: "https://github.com/Eliel-el/",
+        link: "https://github.com/ElielMukekwa/NetworkManager",
+        github: "https://github.com/ElielMukekwa/",
         image: "image/reseau.png"
     },
     {
         title: "Application reconnaissance faciale",
         description: "Application mobile de reconnaissance faciale utilisant Flutter et TensorFlow Lite. Permet d'identifier les visages en temps réel à partir de la caméra du smartphone.",
         tags: ["Flutter", "Dart", "TensorFlow Lite"],
-        link: "https://github.com/Eliel-el/",
-        github: "https://github.com/Eliel-el/",
+        link: "https://github.com/ElielMukekwa/",
+        github: "https://github.com/ElielMukekwa/",
         image: "image/facial.png"
         // image: "" // Si pas d'image, un dégradé sera affiché
     },
@@ -253,16 +253,16 @@ const projectsData = [
         title: "Agence de Transport API",
         description: "API REST pour la gestion d'une agence de transport, développée en Java . Permet de gérer les réservations, les itinéraires et les clients via des endpoints sécurisés.",
         tags: ["Java", "GlassFish", "API REST"],
-        link: "https://github.com/Eliel-el/AgenceTransportPART3",
-        github: "https://github.com/Eliel-el/",
+        link: "https://github.com/ElielMukekwa/AgenceTransportPART3",
+        github: "https://github.com/ElielMukekwa/",
         image: "image/Agence.png"
     },
     {
         title: "J-Weather",
         description: "Api REST de prévisions météorologiques développée en Java. Fournit des données météorologiques actuelles.",
         tags: ["Java", "API REST"],
-        link: "https://github.com/Eliel-el/j-weather",
-        github: "https://github.com/Eliel-el/",
+        link: "https://github.com/ElielMukekwa/j-weather",
+        github: "https://github.com/ElielMukekwa/",
         image: "image/j-w.png"
     },
 ];
